@@ -13,8 +13,15 @@ namespace gestor_estoque
 
         public void adicionarProduto(string nomeProduto, string descricao, double preco, int quantidadeEstoque)
         {
-            ProdutoModel produto = new ProdutoModel(nomeProduto, descricao, preco, quantidadeEstoque);
-            produtos.Add(produto);
+            try
+            {
+                ProdutoModel produto = new ProdutoModel(nomeProduto, descricao, preco, quantidadeEstoque);
+                produtos.Add(produto);
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());   
+            }
+            Console.WriteLine("Produto adicionado com sucesso!");
         }
 
         public void atualizarProduto(int id, string nomeProduto)

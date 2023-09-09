@@ -24,13 +24,16 @@ internal class Program
     private static void Main(string[] args)
     {
         bool continua = false;
+        MovimentacaoEstoque estoque = new MovimentacaoEstoque();
         while (!continua)
         {
             Console.WriteLine("--CONTROLE DE ESTOQUE--\n");
             Console.WriteLine("Que tipo de ação quer fazer?");
             Console.WriteLine("1-Adicionar/Atualizar/Excluir/Listar produtos.\n2-Registrar movimentações de estoque.\n3-Gerar relatórios.\n4-Sair.");
             MenuPrincipal opcao1 = (MenuPrincipal)int.Parse(Console.ReadLine());
-            switch(opcao1)
+            Thread.Sleep(500);
+            Console.Clear();
+            switch (opcao1)
             {
                 case MenuPrincipal.produto:
                     bool sair = false;
@@ -40,9 +43,19 @@ internal class Program
                         MenuProduto opcao2 = (MenuProduto)int.Parse(Console.ReadLine());
                         switch (opcao2)
                         {
+
                             case MenuProduto.Adicionar:
-                                Console.WriteLine("Adicionar");
-                                Thread.Sleep(1000);
+                                Console.Write("Digite o nome do produto: ");
+                                String nome = Console.ReadLine();
+                                Console.Write("Digite a descricao do produto: ");
+                                String descricao = Console.ReadLine();
+                                Console.Write("Digite o preco do produto: ");
+                                double preco = double.Parse(Console.ReadLine());
+                                Console.Write("Digite a quantidade em estoque do produto: ");
+                                int quantidadeEstoque = int.Parse(Console.ReadLine());
+                                estoque.adicionarProduto(nome,descricao,preco,quantidadeEstoque);
+                                Console.WriteLine("Aperte ENTER para continuar.");
+                                Console.ReadLine();
                                 Console.Clear();
                                 break;
                             case MenuProduto.Atualizar:
@@ -54,7 +67,9 @@ internal class Program
                                 Console.Clear();
                                 break;
                             case MenuProduto.Listar_produtos:
-                                Thread.Sleep(1000); 
+                                estoque.listarProdutos();
+                                Console.WriteLine("Aperte ENTER para voltar ao menu.");
+                                Console.ReadLine();
                                 Console.Clear();
                                 break;
                             case MenuProduto.Pesquisar:
