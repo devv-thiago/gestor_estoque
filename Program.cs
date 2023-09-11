@@ -59,12 +59,20 @@ internal class Program
                                 Console.Clear();
                                 break;
                             case MenuProduto.Atualizar:
+                                Console.WriteLine("Digite o ID do item que deseja atualizar as informacoes: ");
+                                int id = int.Parse(Console.ReadLine());
+                                estoque.atualizarProduto(id);
+                                Console.WriteLine("Produto atualizado com sucesso.");
                                 Thread.Sleep(1000);
                                 Console.Clear();
                                 break;
                             case MenuProduto.Excluir:
-                                Thread.Sleep(1000);
+                                Console.WriteLine("Digite o ID do item que deseja fazer a exclusao: ");
+                                int idProduto = int.Parse(Console.ReadLine());
+                                estoque.excluirProduto(idProduto);
+                                Thread.Sleep(2000);
                                 Console.Clear();
+                                Console.ReadLine();
                                 break;
                             case MenuProduto.Listar_produtos:
                                 estoque.listarProdutos();
@@ -73,7 +81,11 @@ internal class Program
                                 Console.Clear();
                                 break;
                             case MenuProduto.Pesquisar:
-                                Thread.Sleep(1000);
+                                Console.Write("Digite o nome do produto que deseja: ");
+                                string nomeProduto = Console.ReadLine();
+                                estoque.listarProdutoNome(nomeProduto);
+                                Console.WriteLine("Aperte ENTER para voltar ao menu.");
+                                Console.ReadLine();
                                 Console.Clear();
                                 break;
                             case MenuProduto.Retorna:
@@ -96,8 +108,6 @@ internal class Program
                     break;
                 case MenuPrincipal.sair:
                     continua = !continua;
-                    Console.WriteLine("Saindo...");
-                    Thread.Sleep(1000);
                     break;
             }
         }

@@ -24,26 +24,59 @@ namespace gestor_estoque
             Console.WriteLine("Produto adicionado com sucesso!");
         }
 
-        public void atualizarProduto(int id, string nomeProduto)
+        public void atualizarProduto(int id)
         {
-            throw new NotImplementedException();
+            int idProd = id; 
+        try
+            {
+                int indexProdAtualizar = produtos.FindIndex(x => x.Id == id);
+                Console.Write("Digite o nome atualizado do produto: ");
+                string nome = Console.ReadLine();
+                Console.Write("Digite a descricao atualizada: ");
+                string descricao = Console.ReadLine();
+                Console.Write("Digite o preco atualizado: ");
+                double preco = double.Parse(Console.ReadLine());
+                Console.Write("Digite a quantidade de estoque atualizado: ");
+                int quantidadeEstoque = int.Parse(Console.ReadLine());
+                Console.Clear();
+                Console.WriteLine("Verique as informacoes: ");
+                Console.WriteLine($"Nome atualizado: {nome}");
+                Console.WriteLine($"Descricao atualizada: {descricao}");
+                Console.WriteLine($"Preco atualizado: {preco}");
+                Console.WriteLine($"Quantidade estoque atualizada: {quantidadeEstoque}");
+                Console.Write("Confirmar atualizacao? S/n ");
+                string resposta = Console.ReadLine();
+                if (resposta.ToLower().Equals("s")) {
+                    produtos[indexProdAtualizar] = new ProdutoModel(nome, descricao, preco, quantidadeEstoque);
+                } else
+                {
+                    Console.Clear();
+                    atualizarProduto(idProd);
+                }
+                
+            }
+            catch (Exception ex) { Console.WriteLine( ex.ToString()); }
         }
 
         public void excluirProduto(int id)
         {
             try {
-                foreach (var produto in produtos)
-                {
-                    if (produto.Id == id)
+                var produtoParaExcluir = produtos.FirstOrDefault(x => x.Id == id);
+                    if (id!= null)
                     {
-                        produtos.RemoveAt(id);
+                        produtos.Remove(produtoParaExcluir);
+                        Console.WriteLine("Item excluído com sucesso.");
+                    } else
+                    {
+                        Console.WriteLine("Item nao encontrado.");
                     }
-                }
+                
             }
             catch (Exception excep)
             {
                 Console.WriteLine(excep);
             }
+            
 
         }
 
@@ -56,11 +89,7 @@ namespace gestor_estoque
                     if (nomeProduto == produto.NomeProduto)
                     {
                         Console.WriteLine($"ID: {produto.Id} - Nome: {produto.NomeProduto} - Descricao: {produto.Descricao} - Preco: R${produto.Preco} - Estoque: {produto.QuantidadeEstoque}");
-                    } else
-                    {
-                        Console.WriteLine("Produto nao encontrado, verifique as informacoes.");
                     }
-
                 }
             }
             catch (Exception excep)

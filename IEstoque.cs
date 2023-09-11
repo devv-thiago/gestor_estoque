@@ -12,9 +12,8 @@ namespace gestor_estoque
 
         protected void adicionarProduto(string nomeProduto, string descricao, double preco, int quantidadeEstoque);
         protected void listarProdutos();
-
         protected void listarProdutoNome(string nomeProduto);
-        protected void atualizarProduto(int id, string nomeProduto);
+        protected void atualizarProduto(int id);
         protected void excluirProduto(int id);
 
     }
