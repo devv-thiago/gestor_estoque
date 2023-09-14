@@ -18,6 +18,12 @@ enum MenuProduto
     Pesquisar,
     Retorna
 }
+enum MenuMovimentacao
+{
+    Entrada = 1,
+    Saida,
+    Retorna
+}
 
 internal class Program
 {
@@ -99,8 +105,35 @@ internal class Program
                     
                     break;
                 case MenuPrincipal.movimentacao:
-                    Console.WriteLine("Em desenvolvimento");
-                    Console.Clear();
+                   
+                    bool sair2 = false;
+                    while (!sair2) {
+                        Console.WriteLine("Escolha a acao que quer fazer:\n1-Registrar entrada.\n2-Registrar saida.\n3-Retornar menu principal");
+                        MenuMovimentacao opcao3 = (MenuMovimentacao)int.Parse(Console.ReadLine());
+                    
+                        switch (opcao3)
+                        {
+                            case MenuMovimentacao.Entrada:
+                                estoque.entradaProduto();
+                                Console.WriteLine("Aperte ENTER para voltar ao menu.");
+                                Console.ReadLine();
+                                Console.Clear();
+                                break;
+                            case MenuMovimentacao.Saida:
+                                estoque.saidaProduto();
+                                Console.WriteLine("Aperte ENTER para voltar ao menu.");
+                                Console.ReadLine();
+                                Console.Clear();
+                                break;
+                            case MenuMovimentacao.Retorna:
+                                sair2 = !sair2;
+                                Console.WriteLine("Retornando...");
+                                Thread.Sleep(1000);
+                                Console.Clear();
+                                break;
+                        }
+                    }
+                        
                     break;
                 case MenuPrincipal.relatorio:
                     Console.WriteLine("Em desenvolvimento");
