@@ -65,7 +65,7 @@ namespace gestor_estoque
         {
             try {
                 var produtoParaExcluir = produtos.FirstOrDefault(x => x.Id == id);
-                    if (id!= null)
+                    if (id != null)
                     {
                         produtos.Remove(produtoParaExcluir);
                         Console.WriteLine("Item excluído com sucesso.");
@@ -154,7 +154,7 @@ namespace gestor_estoque
 
                 Console.Write("Quantos itens foram retirados do estoque: ");
                 int quantidadeSaida = int.Parse(Console.ReadLine());
-                produtoAtualizacao.QuantidadeEstoque -= quantidadeSaida;
+                produtoAtualizacao.QuantidadeEstoque = produtoAtualizacao.QuantidadeEstoque - quantidadeSaida;
                 registroMovimentacao(produtoAtualizacao.Id, produtoAtualizacao.NomeProduto, operacaoSaida);
                 Console.WriteLine("Produto atualizado com sucesso.");
                 
@@ -169,6 +169,13 @@ namespace gestor_estoque
         {
             MovimentacaoModel movimentacao = new MovimentacaoModel(idProduto, nomeProduto, operacao);
             movimentacoes.Add(movimentacao);
+        }
+        public void listarMovimentacoes()
+        {
+            foreach (var movimentacao in movimentacoes)
+            {
+                Console.WriteLine($"ID movimentacao: {movimentacao.IdMovimentacao} - ID produto: {movimentacao.IdProduto} - Nome produto: {movimentacao.NomeProduto} - Operacao: {movimentacao.Operacao} - Data movimentacao: {movimentacao.DataMovimentacao}");
+            }
         }
     }
 }

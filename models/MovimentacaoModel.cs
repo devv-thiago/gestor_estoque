@@ -13,6 +13,7 @@ namespace gestor_estoque.models
         private string nomeProduto;
         private string operacao;
         protected private static int proximoId = 1;
+        private DateTime dataMovimentacao;
 
         public MovimentacaoModel(int idProduto, string nomeProduto, string operacao)
         {
@@ -20,11 +21,14 @@ namespace gestor_estoque.models
             this.idProduto = idProduto;
             this.nomeProduto = nomeProduto;
             this.operacao = operacao;
+            this.dataMovimentacao = DateTime.Now;
+            ;
         }
 
         public int IdMovimentacao { get => idMovimentacao; set => idMovimentacao = value; }
         public int IdProduto { get => idProduto; set => idProduto = value; }
         public string NomeProduto { get => nomeProduto; set => nomeProduto = value; }
         public string Operacao { get => operacao; set => operacao = value; }
+        public DateTime DataMovimentacao { get => dataMovimentacao; set => dataMovimentacao = value; }
     }
 }

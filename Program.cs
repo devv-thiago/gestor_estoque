@@ -22,6 +22,7 @@ enum MenuMovimentacao
 {
     Entrada = 1,
     Saida,
+    listar,
     Retorna
 }
 
@@ -108,7 +109,7 @@ internal class Program
                    
                     bool sair2 = false;
                     while (!sair2) {
-                        Console.WriteLine("Escolha a acao que quer fazer:\n1-Registrar entrada.\n2-Registrar saida.\n3-Retornar menu principal");
+                        Console.WriteLine("Escolha a acao que quer fazer:\n1-Registrar entrada.\n2-Registrar saida.\n3-Listar movimentacoes.\n4-Retornar menu principal");
                         MenuMovimentacao opcao3 = (MenuMovimentacao)int.Parse(Console.ReadLine());
                     
                         switch (opcao3)
@@ -121,6 +122,12 @@ internal class Program
                                 break;
                             case MenuMovimentacao.Saida:
                                 estoque.saidaProduto();
+                                Console.WriteLine("Aperte ENTER para voltar ao menu.");
+                                Console.ReadLine();
+                                Console.Clear();
+                                break;
+                            case MenuMovimentacao.listar:
+                                estoque.listarMovimentacoes();
                                 Console.WriteLine("Aperte ENTER para voltar ao menu.");
                                 Console.ReadLine();
                                 Console.Clear();
