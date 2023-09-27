@@ -1,13 +1,13 @@
-# gestor de estoque (Sem interface visual)
+# Gestor de estoque (Sem interface visual)
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
 
 Este projeto em C# visa criar um sistema de gerenciamento de estoque básico, projetado para ajudar no controle e registro de informações sobre produtos e movimentações de estoque. O projeto é uma implementação simples, mas aberta à expansão e aprimoramento, adaptando-se às necessidades específicas do usuário.
 
 ## Funcionalidades Principais
 - **Gerenciamento de produtos:** Os usuários podem registrar, excluir e atualizar produtos do estoque.
-- **Registro de movimentação de estoque:** Ao realizar alguma alteração no estoque, as movimentação são registradas, e podem ser visualizadas posteriormente.
+- **Registro de movimentação de estoque:** Ao realizar alguma alteração no estoque, as movimentações são registradas, e podem ser visualizadas posteriormente.
 - **Gerenciamento de estoque:** Os usuários podem registrar entrada e saída.
-- **Relatórios:** Os usuários podem gerar relatórios dos produtos produtos em estoque, e das movimentações que foram feitas.
+- **Relatórios:** Os usuários podem gerar relatórios dos produtos em estoque, e das movimentações que foram feitas.
 
 ## Instalação 
 ### Para desenvolvedores
@@ -16,7 +16,7 @@ Para executar este projeto, você precisará configurar o ambiente de desenvolvi
 
 Após concluir essas etapas, você terá um ambiente de desenvolvimento C# configurado em sua máquina. Agora você está pronto para executar o projeto.
 
-#### 2. Execucao
+#### 2. Execução
 Para executar o projeto é necessário apenas executar o mesmo dentro do Visual Studio, o projeto vai ser executado na linha de comando do Windows.
 
 ## Licença
