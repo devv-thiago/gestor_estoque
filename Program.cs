@@ -25,6 +25,12 @@ enum MenuMovimentacao
     listar,
     Retorna
 }
+enum MenuRelatorio
+{
+    Produto = 1,
+    Movimentacao,
+    Retorna
+}
 
 internal class Program
 {
@@ -32,6 +38,7 @@ internal class Program
     {
         bool continua = false;
         MovimentacaoEstoque estoque = new MovimentacaoEstoque();
+        Relatorio relatorio = new Relatorio();
         while (!continua)
         {
             Console.WriteLine("--CONTROLE DE ESTOQUE--\n");
@@ -143,8 +150,30 @@ internal class Program
                         
                     break;
                 case MenuPrincipal.relatorio:
-                    Console.WriteLine("Em desenvolvimento");
-                    Console.Clear();
+                    bool sair3 = false;
+                    while (!sair3)
+                    {
+                        Console.WriteLine("Escolha a acao que quer fazer:\n1-Relatorio de produtos.\n2-Relatorio de movimentacoes.\n3-Retornar menu principal");
+                        MenuRelatorio opcao4 = (MenuRelatorio)int.Parse(Console.ReadLine());
+                        switch (opcao4)
+                        {
+                            case MenuRelatorio.Produto:
+                                relatorio.relatorioProduto(estoque.produtos);
+                                Console.WriteLine("Aperte ENTER para voltar ao menu.");
+                                Console.ReadLine();
+                                Console.Clear(); 
+                                break;
+                            case MenuRelatorio.Movimentacao:
+                                break;
+                            case MenuRelatorio.Retorna:
+                                sair2 = !sair3;
+                                Console.WriteLine("Retornando...");
+                                Thread.Sleep(1000);
+                                Console.Clear();
+                                break;
+                    }
+                    }
+                    
                     break;
                 case MenuPrincipal.sair:
                     continua = !continua;

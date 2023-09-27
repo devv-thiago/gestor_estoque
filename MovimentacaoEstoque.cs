@@ -11,8 +11,8 @@ namespace gestor_estoque
 {
     internal class MovimentacaoEstoque : IEstoque
     {
-        static List<ProdutoModel> produtos = new List<ProdutoModel>();
-        static List<MovimentacaoModel> movimentacoes = new List<MovimentacaoModel>();
+        public List<ProdutoModel> produtos = new List<ProdutoModel>();
+        public List<MovimentacaoModel> movimentacoes = new List<MovimentacaoModel>();
 
         public void adicionarProduto(string nomeProduto, string descricao, double preco, int quantidadeEstoque)
         {
