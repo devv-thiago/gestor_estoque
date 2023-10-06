@@ -8,8 +8,6 @@ namespace gestor_estoque
 {
     internal interface IEstoque
     {
-
-
         protected void adicionarProduto(string nomeProduto, string descricao, double preco, int quantidadeEstoque);
         protected void listarProdutos();
         protected void listarProdutoNome(string nomeProduto);

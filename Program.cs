@@ -39,10 +39,11 @@ internal class Program
         bool continua = false;
         MovimentacaoEstoque estoque = new MovimentacaoEstoque();
         Relatorio relatorio = new Relatorio();
+        estoque.LoadData();
         while (!continua)
         {
             Console.WriteLine("--CONTROLE DE ESTOQUE--\n");
-            Console.WriteLine("Que tipo de ação quer fazer?");
+            Console.WriteLine("Escolha uma opcao:");
             Console.WriteLine("1-Adicionar/Atualizar/Excluir/Listar produtos.\n2-Registrar movimentações de estoque.\n3-Gerar relatórios.\n4-Sair.");
             MenuPrincipal opcao1 = (MenuPrincipal)int.Parse(Console.ReadLine());
             Thread.Sleep(500);
@@ -164,6 +165,10 @@ internal class Program
                                 Console.Clear(); 
                                 break;
                             case MenuRelatorio.Movimentacao:
+                                relatorio.relatorioMovimentacao(estoque.movimentacoes);
+                                Console.WriteLine("Aperte ENTER para voltar ao menu.");
+                                Console.ReadLine();
+                                Console.Clear();
                                 break;
                             case MenuRelatorio.Retorna:
                                 sair2 = !sair3;
@@ -176,6 +181,7 @@ internal class Program
                     
                     break;
                 case MenuPrincipal.sair:
+                    estoque.SaveData();
                     continua = !continua;
                     break;
             }

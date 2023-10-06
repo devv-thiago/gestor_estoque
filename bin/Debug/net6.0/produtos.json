@@ -1,0 +1,9 @@
+[
+  {
+    "QuantidadeEstoque": 12,
+    "Id": 1,
+    "NomeProduto": "teste",
+    "Preco": 12.0,
+    "Descricao": "teste"
+  }
+]
