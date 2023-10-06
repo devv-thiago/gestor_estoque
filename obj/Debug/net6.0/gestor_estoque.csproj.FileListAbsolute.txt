@@ -1,0 +1,17 @@
+G:\csharp\gestor_estoque\bin\Debug\net6.0\gestor_estoque.exe
+G:\csharp\gestor_estoque\bin\Debug\net6.0\gestor_estoque.deps.json
+G:\csharp\gestor_estoque\bin\Debug\net6.0\gestor_estoque.runtimeconfig.json
+G:\csharp\gestor_estoque\bin\Debug\net6.0\gestor_estoque.dll
+G:\csharp\gestor_estoque\bin\Debug\net6.0\gestor_estoque.pdb
+G:\csharp\gestor_estoque\obj\Debug\net6.0\gestor_estoque.GeneratedMSBuildEditorConfig.editorconfig
+G:\csharp\gestor_estoque\obj\Debug\net6.0\gestor_estoque.AssemblyInfoInputs.cache
+G:\csharp\gestor_estoque\obj\Debug\net6.0\gestor_estoque.AssemblyInfo.cs
+G:\csharp\gestor_estoque\obj\Debug\net6.0\gestor_estoque.csproj.CoreCompileInputs.cache
+G:\csharp\gestor_estoque\obj\Debug\net6.0\gestor_estoque.dll
+G:\csharp\gestor_estoque\obj\Debug\net6.0\refint\gestor_estoque.dll
+G:\csharp\gestor_estoque\obj\Debug\net6.0\gestor_estoque.pdb
+G:\csharp\gestor_estoque\obj\Debug\net6.0\gestor_estoque.genruntimeconfig.cache
+G:\csharp\gestor_estoque\obj\Debug\net6.0\ref\gestor_estoque.dll
+G:\csharp\gestor_estoque\obj\Debug\net6.0\gestor_estoque.csproj.AssemblyReference.cache
+G:\csharp\gestor_estoque\bin\Debug\net6.0\Newtonsoft.Json.dll
+G:\csharp\gestor_estoque\obj\Debug\net6.0\gestor_estoque.csproj.CopyComplete

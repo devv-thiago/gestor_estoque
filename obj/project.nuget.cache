@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "r6dL+l/WlwVciUY9gPlY7rBO+Pb04Q48Sl5ETWK+vW5MqJQjm1QDD12qNO3wnDaltsBOoLAVk1Ne/xbi4FJ24g==",
+  "success": true,
+  "projectFilePath": "G:\\csharp\\gestor_estoque\\gestor_estoque.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tfofa\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
