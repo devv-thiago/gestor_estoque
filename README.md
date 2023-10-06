@@ -8,6 +8,7 @@ Este projeto em C# visa criar um sistema de gerenciamento de estoque básico, pr
 - **Registro de movimentação de estoque:** Ao realizar alguma alteração no estoque, as movimentações são registradas, e podem ser visualizadas posteriormente.
 - **Gerenciamento de estoque:** Os usuários podem registrar entrada e saída.
 - **Relatórios:** Os usuários podem gerar relatórios dos produtos em estoque, e das movimentações que foram feitas.
+- **Persistência de dados:** Ao fechar e abrir novamente o programa, os dados que foram registrados anteriormente são salvos em arquivos JSON para ter a permanência de dados. 
 
 ## Instalação 
 ### Para desenvolvedores
